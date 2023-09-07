@@ -26,7 +26,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   body {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -48,6 +48,12 @@ header nav {
   gap: 12px;
   padding-right: 42px;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  header nav {
+    width: 100%;
+    justify-content: space-around;
+  }
 }
 header nav .nav__link {
   text-decoration: none;
@@ -112,7 +118,7 @@ header nav .nav__link:hover {
 }
 @media screen and (max-width: 768px) {
   #landing #landing-main .landing-main__img {
-    width: 80%;
+    height: 0;
   }
 }
 #landing #landing-main .landing-main__img .landing-card {
@@ -123,7 +129,11 @@ header nav .nav__link:hover {
   transition: transform 1s ease-in-out;
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  #landing #landing-main .landing-main__img .landing-card {
+    height: 0;
+  }
 }
 #landing #landing-main .landing-main__img .landing-card .side {
   width: 100%;
@@ -136,6 +146,11 @@ header nav .nav__link:hover {
   z-index: 1;
   border-radius: 12px;
 }
+@media screen and (max-width: 768px) {
+  #landing #landing-main .landing-main__img .landing-card .side--front {
+    height: 0;
+  }
+}
 #landing #landing-main .landing-main__img .landing-card .side--front img {
   object-fit: cover;
   height: 70vh;
@@ -144,6 +159,11 @@ header nav .nav__link:hover {
   transition: transform 0.5s ease;
   transform-style: preserve-3d;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 768px) {
+  #landing #landing-main .landing-main__img .landing-card .side--front img {
+    height: 0;
+  }
 }
 #landing #landing-main .landing-main__img .landing-card .side--back {
   transform: rotateY(180deg);
@@ -157,11 +177,21 @@ header nav .nav__link:hover {
   align-items: center;
   gap: 15px;
 }
+@media screen and (max-width: 768px) {
+  #landing #landing-main .landing-main__img .landing-card .side--back {
+    height: 0;
+  }
+}
 #landing #landing-main .landing-main__img .landing-card .side--back .wrapper-photo {
   width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  #landing #landing-main .landing-main__img .landing-card .side--back .wrapper-photo {
+    height: 0;
+  }
 }
 #landing #landing-main .landing-main__img .landing-card .side--back .wrapper-photo img {
   width: 50%;
@@ -175,6 +205,11 @@ header nav .nav__link:hover {
   padding: 0;
   margin: 5px 0;
 }
+@media screen and (max-width: 768px) {
+  #landing #landing-main .landing-main__img .landing-card .side--back .qualities-list {
+    height: 0;
+  }
+}
 #landing #landing-main .landing-main__img .landing-card .side--back .qualities-list li {
   font-size: 1em;
   margin: 8px 12px;
@@ -184,6 +219,11 @@ header nav .nav__link:hover {
   align-items: center;
   background-color: white;
   border-radius: 25px;
+}
+@media screen and (max-width: 768px) {
+  #landing #landing-main .landing-main__img .landing-card .side--back .qualities-list li {
+    height: 0;
+  }
 }
 #landing #landing-main .landing-main__img .landing-card .side--back .qualities-list li .li-logo {
   width: 20px;
@@ -319,12 +359,27 @@ header nav .nav__link:hover {
   opacity: 0.2;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: space-around;
+    gap: 8px;
+  }
+}
 .project-card img {
   width: 40%;
   margin: 20px;
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 768px) {
+  .project-card img {
+    flex-direction: column;
+    width: 100%;
+    margin: 4px 0;
+  }
 }
 .project-card__description {
   margin: 20px;
@@ -334,6 +389,13 @@ header nav .nav__link:hover {
   align-items: center;
   width: 40%;
   gap: 8px;
+}
+@media screen and (max-width: 768px) {
+  .project-card__description {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 }
 .project-card__description__text {
   display: flex;
@@ -346,14 +408,31 @@ header nav .nav__link:hover {
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+@media screen and (max-width: 768px) {
+  .project-card__description__text {
+    width: 100%;
+    margin: 4px;
+    padding: 0;
+  }
+}
 .project-card__description__text h3 {
   font-size: 1.8em;
   margin: 8px;
+}
+@media screen and (max-width: 768px) {
+  .project-card__description__text h3 {
+    margin: 4px;
+  }
 }
 .project-card__description__text p {
   color: #767676;
   padding: 0 32px;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .project-card__description__text p {
+    padding: 0 8px;
+  }
 }
 .project-card__description__tech {
   padding: 8px;
