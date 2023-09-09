@@ -465,7 +465,7 @@ header nav .nav__link:hover {
 }
 
 .project-card:hover .project-details .mission,
-.project-card:hover .project-details .code-link {
+.project-card:hover .project-details .project-details-description {
   opacity: 1;
   transition-delay: 0s;
   z-index: 1;
@@ -492,8 +492,7 @@ header nav .nav__link:hover {
   opacity: 0;
   z-index: -1;
 }
-.project-details .mission,
-.project-details .code-link {
+.project-details .mission {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -508,16 +507,50 @@ header nav .nav__link:hover {
   opacity: 0;
   transition-delay: 0s;
 }
-.project-details .mission h3,
-.project-details .code-link h3 {
+.project-details .mission h3 {
   font-size: 1.8em;
   margin: 8px;
 }
-.project-details .mission p,
-.project-details .code-link p {
+.project-details .mission p {
   color: #767676;
   padding: 0 32px;
   text-align: center;
+}
+.project-details .project-details-description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+  padding: 0 16px;
+  width: 100%;
+  opacity: 0;
+  transition-delay: 0s;
+}
+.project-details .project-details-description .project-details-description-issues {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0px;
+  font-size: 0.9em;
+}
+.project-details .project-details-description h3 {
+  font-size: 1.8em;
+  margin: 8px;
+}
+.project-details .project-details-description p {
+  color: #767676;
+  padding: 0 32px;
+  margin: 0;
+  text-align: left;
 }
 .project-details .code-link-wrapper a .gitHub-link {
   width: 40px;
@@ -597,6 +630,12 @@ header nav .nav__link:hover {
 }
 #contact .social-links .social-links-logo img {
   width: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .project-card {
+    pointer-events: none;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
